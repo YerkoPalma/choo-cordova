@@ -1,0 +1,27 @@
+{
+  "name": "choo-cordova",
+  "description": "Choo hooks for the cordova API",
+  "author": "YerkoPalma",
+  "version": "0.1.0",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "standard --verbose | snazzy && tape test.js | tap-summary",
+    "start": "node index.js"
+  },
+  "repository": "YerkoPalma/choo-cordova",
+  "license": "MIT",
+  "keywords": [
+    "choo",
+    "cordova",
+    "mobile"
+  ],
+  "devDependencies": {
+    "snazzy": "^7.1.1",
+    "standard": "^11.0.1",
+    "tap-summary": "^4.0.0",
+    "tape": "^4.9.0"
+  }
+}
