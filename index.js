@@ -17,13 +17,13 @@ var events = store.events = {
 
 function store (state, emitter) {
   state.cordova = {}
-  document.addEventListener(events.DEVICE_READY, () => {
-    emitter.emit(events.DEVICE_READY)
+  document.addEventListener(events.DEVICE_READY, () => {    
     Object.keys(cordova).forEach(key => {
       if (cordova.hasOwnProperty(key) && typeof cordova[key] !== 'function') {
         state.cordova[key] = cordova[key]
       }
     })
+    emitter.emit(events.DEVICE_READY)
   }, false)
 
   document.addEventListener(events.PAUSE, () => {
